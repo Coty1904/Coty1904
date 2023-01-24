@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+header h1{
+    font-family: "montserrat", sans-serif;
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    background-color: lightgray;
+}
+
+body h2, .titulo {
+    font-family: "DM Sans";
+    font-size: 2rem;
+    color: rgb(50, 50, 50)
+}
+
+.texto {
+    font-family: "DM Sans";
+    font-size: 1rem;
+}
+
+h3, .redes{
+    text-decoration: none;
+    font-family: 'Bree Serif', serif;
+    font-size: 1.5rem;
+    color: rgb(100, 100, 100);
+}
+
+footer h2{
+    text-decoration: none;
+    font-family: 'Bree Serif', serif;
+    line-height:2rem;
+}
+
+footer p {
+    font-family: "DM Sans";
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
