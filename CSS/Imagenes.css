@@ -1,0 +1,89 @@
+.Formación {
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../Imagenes/Titulos/Educacion.png');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Formación h2 {
+    color: whitesmoke;
+}
+
+.Idiomas {
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../Imagenes/Titulos/Idiomas.png');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Idiomas h2 {
+    color: whitesmoke;
+}
+
+.Conocimientos {
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../Imagenes/Titulos/Conocimientos\ Y\ Habilidades.png');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Conocimientos h2 {
+    color: whitesmoke;
+}
+
+.Hobbies {
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../Imagenes/Titulos/Hobbies.png');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Hobbies h2 {
+    color: whitesmoke;
+}
+
+.Voluntariado {
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../Imagenes/Titulos/Voluntariado.png');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Voluntariado h2 {
+    color: whitesmoke;
+}
+
+.Portafolio {
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../Imagenes/Titulos/Portafolio.png');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Portafolio h2 {
+    color: whitesmoke;
+}
