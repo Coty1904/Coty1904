@@ -4,12 +4,6 @@
   padding: 0;
 }
 
-.linea{
-  background-color: whitesmoke;
-  height: 0.313rem;
-  width: 100%;
-  display: block;
-}
 
 .galeria {
   display: grid;
@@ -101,6 +95,6 @@
 }
 
 .video {
-  width: 25%;
+  max-width: 25vw;
   height: auto;
 }
