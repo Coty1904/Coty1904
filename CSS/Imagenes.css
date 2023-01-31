@@ -1,0 +1,227 @@
+.Formación {
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../Imagenes/Titulos/Educacion.png');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Idiomas {
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../Imagenes/Titulos/Idiomas.png');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Conocimientos {
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../Imagenes/Titulos/Conocimientos\ Y\ Habilidades.png');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Hobbies {
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../Imagenes/Titulos/Hobbies.png');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Voluntariado {
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../Imagenes/Titulos/Voluntariado.png');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Portafolio {
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../Imagenes/Titulos/Portafolio.png');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}           
+
+.galeria {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.foto img {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    object-fit: cover;
+    justify-content: center;
+    opacity: .7;
+}
+
+.foto img:hover {
+    opacity: 1;
+}
+
+.margen{
+    background-color: white;
+    margin: 1rem;
+    align-self: center;
+}
+
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: auto;
+    align-items: center;
+}
+
+.foto1 {
+    width: 20rem;
+    max-height: auto;
+}
+
+.foto2 {
+    width: 50rem;
+    max-height: auto;
+}
+
+.foto3 {
+    width: 25rem;
+    max-height: auto;
+}
+
+.foto4 {
+    width: 30rem;
+    max-height: auto;
+}
+
+.foto5 {
+    width: 20rem;
+    max-height: auto;
+}
+
+.foto6, .foto7 {
+    width: 30rem;
+    max-height: auto;
+}
+
+.foto10 {
+    width: 25rem;
+    max-height: auto;
+}
+
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font: normal smaller verdana;
+    padding: 3px;
+    text-align: center;
+}
+
+
+.imagen2 {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.imagen3 {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.imagen4 {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.imagen5 {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.imagen6 {
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.imagen7 {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.imagen8 {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.imagen9 {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.imagen10 {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.coty {
+    border: 1px solid gray;
+    padding: 1rem;
+    width: 25vh;
+}
