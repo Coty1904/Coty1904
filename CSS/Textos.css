@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+header h1{
+  font-family: "montserrat", sans-serif;
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+  background-color: lightgray;
+}
+
+.Formación h2 {
+    color: whitesmoke;
+}
+
+.Idiomas h2 {
+    color: whitesmoke;
+}
+
+.Conocimientos h2 {
+    color: whitesmoke;
+}
+
+.Hobbies h2 {
+    color: whitesmoke;
+}
+
+.Voluntariado h2 {
+    color: whitesmoke;
+}
+
+.Portafolio h2 {
+    color: whitesmoke;
+}
+
+.trashumante-texto{
+    margin-left: 1.5rem;
+    font-family: "DM Sans";
+    font-weight: bolder;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+.trashumante-texto-lista {
+    margin-left: 1.5rem; 
+    font-family: "montserrat", sans-serif;
+    line-height: 4rem;
+    align-items: flex-start;
+}
+
+.titulo {
+  font-family: "DM Sans";
+  font-size: 2rem;
+  color: rgb(50, 50, 50)
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.125rem;
+  text-align: justify;
+}
+
+.texto {
+  margin-top: .5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-family: "DM Sans";
+  font-size: 1rem;
+}
+
+.presentación-titulo {
+  font-family: "DM Sans";
+  font-size: 4rem;
+  text-align: start;
+}
+
+.presentación-texto {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  text-align: justify;
+
+}
+
+h3, .redes{
+  text-decoration: none;
+  font-family: 'Bree Serif', serif;
+  font-size: 1.5rem;
+  color: rgb(100, 100, 100);
+  padding-left: .5rem;
+}
+
+.margin p{
+  position: relative;
+  display: flex;
+  justify-items: center;
+  justify-items: flex-end;
+}
+
+footer h2{
+  font-family: 'Bree Serif', serif;
+  line-height:2rem;
+  text-align: center;
+  font-style: normal;
+}
+
+footer p {
+  font-family: "DM Sans";
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.iconos {
+  padding-left: 2rem;
+}
+
+.uvm-promedio {
+  opacity: 0;
+}
+
+.uvm:hover{
+  opacity: 1;
+}

@@ -1,0 +1,63 @@
+@media (min-width:988px) {
+    .container {
+        margin-left: 4.6rem;
+        margin-right: 4.6rem;
+        background-color: white;
+    }
+
+    .container-inicio {
+        margin-left: 10rem;
+        margin-right: 10rem;
+        background-color: white;
+    }
+
+    .fondo1{
+        background-color: #666;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .fondo2{
+        background-color: rgb(16, 127, 218);
+        display: flex;
+        flex-direction: column; 
+    }
+    
+    .fondo3{
+        background-color: rgb(218, 137, 16);
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .fondo4{
+        background-color: rgb(50, 150, 83);
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .fondo5{
+        background-color: rgb(170, 15, 15);
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .fondo6{
+        background-color: rgb(238, 204, 13);
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .fondo6-1{
+        background-color: rgb(238, 204, 13);
+        display: flex;
+        flex-direction: column;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .fondo7{
+        background-color: rgb(218, 110, 110);
+        display: flex;
+        flex-direction: column;
+    }
+}
