@@ -1,0 +1,63 @@
+/* Cuerpo de Pantalla */
+
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.foto {
+    border: 5px dashed #5D006B;
+    padding: 1rem;
+    margin: 2rem;
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+.container-texto {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.pantalla-titulo {
+    z-index: 1;
+    display: flex;
+    align-self: flex-start;
+    font-family: 'Comodore Angled', monospace;
+    font-size: 2rem;
+    color: #D605DA;
+    letter-spacing: 5px;
+    border-right: 5px solid;
+    width: 25vw;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 1rem;
+    animation: 
+        typing 4s steps(11),
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+.texto {
+    font-family: 'Comodore Angled', monospace;
+    color: #9900A1;
+    text-align: justify;
+    margin: 1rem;
+    width: 50vw;
+}
