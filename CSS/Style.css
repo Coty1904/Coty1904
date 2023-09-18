@@ -1,0 +1,48 @@
+/* Fuentes */
+
+@font-face {
+    font-family: 'Comodore Angled';
+    src: url(../Materiales/Fuentes/Commodore\ Angled\ v1.2.ttf);
+}
+
+/* Barras de navegacion */
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* Mouse */
+  
+#trailer {
+    height: 20px;
+    width: 20px;
+    background-color: #50434F;
+    border-radius: 20px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 500ms ease;
+    display: grid;
+    place-items: center;
+}
+
+body:hover > #trailer {
+    opacity: 1;
+}
+
+/* Cuerpo de la página */
+
+* {
+    box-sizing: border-box;
+    cursor: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
