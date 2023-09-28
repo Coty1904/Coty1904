@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'Comodore Angled';
+    src: url(../Materiales/Fuentes/Commodore\ Angled\ v1.2.ttf);
+}
+
+body {
+    background: hsl(96, 20%, 10%);
+    color: 	hsl(299, 96%, 44%);
+    text-shadow: 0 0 5px hsl(299, 96%, 44%);
+    font-family: 'Comodore Angled', monospace;
+    font-size: 16px;
+}
+/* 
+.Custom-Cursor-Text {
+    cursor: url("../Materiales/mouse/mouse-texto.png"), text;
+} */
+
+.Custom-Cursor {
+    cursor: url("../Materiales/mouse/mouse-default.png"), default;
+    z-index: -10000;
+}
+
+pre {
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+#instructions {
+    font-family: 'Comodore Angled';
+}
+
+.link {
+    color: #FF6BFF;
+    text-decoration: none;
+}
+
+#output {
+    display: table;
+    font-family: 'Comodore Angled';
+    text-wrap: wrap;
+    padding-left: 5rem;
+}
+
+#prompt {
+    padding-left: 4rem;
+    padding-bottom: 2rem;
+}
+
+#glare {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* ensure the effect doesn't cover the text */
+    background: radial-gradient(hsl(97, 24%, 24%), hsl(96, 20%, 10%));
+}
+  
+@keyframes lines {
+    0% {background-position: 0px 0px}
+    50% {background-position: 0px 0px}
+    51% {background-position: 0px 2px}
+    100% {background-position: 0px 2px}
+}
+  
+#interlaced {
+    position: fixed;
+    background: repeating-linear-gradient(transparent 0px 1px, hsl(154 0% 0%/.2) 3px 4px);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    animation: lines 0.06666666s linear infinite;
+}
+  
+@keyframes blink {
+    0% {opacity: 0}
+    30% {opacity: 1}
+    70% {opacity: 1}
+    100% {opacity: 0}
+}
+  
+.blink {
+    animation: blink 0.4s linear infinite;
+}

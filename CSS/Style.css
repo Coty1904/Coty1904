@@ -1,0 +1,27 @@
+/* Fuentes */
+
+@font-face {
+    font-family: 'Comodore Angled';
+    src: url(../Materiales/Fuentes/Commodore\ Angled\ v1.2.ttf);
+}
+
+/* Barras de navegacion */
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* Cuerpo de la página */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    cursor: url("../Materiales/mouse/mouse-standar.png"), auto;
+}
+
+
+
