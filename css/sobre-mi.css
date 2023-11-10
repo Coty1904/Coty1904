@@ -1,0 +1,144 @@
+.sobre-mi {
+    position: fixed; /* Cambiado a fixed para centrar verticalmente */
+    width: 75vw;
+    height: 85vh;
+    background-color: #294D55;
+    z-index: 3; /* Cambiado a z-index 3 */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 45%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste de centrado */
+}
+
+.sobre-mi h2 {
+    font-size: 2rem;
+}
+
+.titulos {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    width: 90%;
+}
+
+.titulos h3 {
+    display: flex;
+    align-items: center;
+    background-color: #697C5E;
+    border-radius: 1rem 1rem 0 0;
+    height: 4.5vh;
+    width: 15%;
+    padding: 0 0.5rem;
+}
+
+.titulos h3:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.titulos .Active {
+    background-color: #A4AE9D;
+    opacity: 0.8;
+    height: 4.5vh;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.container-about.General {
+    display: flex;
+}
+
+.container-about {
+    width: 95%;
+    height: 80%;
+    background-color: #9DB190;
+    display: none;
+    z-index: 3;
+}
+
+.General {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.General::-webkit-scrollbar {
+    width: 8px;
+}
+
+.General::-webkit-scrollbar-track {
+    background-color: #7b0085;
+}
+
+.General::-webkit-scrollbar-thumb {
+    background-color: #b700bd;
+}
+
+.General img {
+    border: solid 2px;
+    padding: 1rem;
+    width: 10vw;
+    height: 10vw;
+    margin: 0 1rem;
+}
+
+.General-texto {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 70%;
+    margin: 2rem 1rem;
+    gap: 1rem;
+}
+
+.General-texto h4 {
+    width: 100%; /* Ajusta el ancho del h4 para ocupar todo el espacio restante */
+    background-color: #717A6A;
+    font-size: 2rem;
+    text-align: center;
+    border: 2px solid #D605DA;
+    box-shadow: 3px 3px #9900A1;
+    color: #9900A1;
+    padding: 1rem;
+}
+
+.General-texto p {
+    width: 100%; /* Ajusta el ancho del párrafo para ocupar todo el espacio restante */
+    background-color: #717A6A;
+    font-size: 1.2rem;
+    border: 2px solid #D605DA;
+    box-shadow: 3px 3px #9900A1;
+    padding: 1rem;
+    color: #5D006B;
+    text-align: justify;
+}
+
+/* Estilos para el botón de cerrar */
+.cerrar-sobre-mi {
+    background-color: red;
+    font-family: 'Comodore Angled', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: none;
+    width: 4vw;
+    height: 4vw;
+    font-size: 2.5vw;
+    cursor: pointer;
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.cerrar-sobre-mi:hover {
+    background-color: darkred;
+}

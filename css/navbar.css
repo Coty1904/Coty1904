@@ -1,0 +1,112 @@
+.dropbtn{
+    color: #D605DA;
+    background-color: #002028;
+    font-family: 'Comodore Angled', monospace;
+    height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    padding: 0 2% 0 1%;
+    border: none;
+}
+
+.Nav-Bar{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    bottom: 100%;
+}
+
+.nav-bar-menu{
+    background-color: #294D55;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 60vh;
+}
+
+.container-titulos {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.container-titulos h3 {
+    width: min-content;
+    padding: 0 5vw 0 0;
+}
+
+.container-titulos img {
+    border-radius: 1rem;
+    border: 2px solid black;
+    width: 5vw;
+    height: 5vw;
+    overflow: hidden;
+}
+
+.container-paginas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #6A867F;
+    margin-top: 5%;
+    height: 77%;
+    width: 95%;
+}
+
+.container-paginas a {
+    margin-bottom: 3%;
+    background-color: #9DB190;
+    color: #9900A1;
+    /* padding-left: 3%; */
+    text-decoration: none;
+    font-size: 3.5vh;
+    display: flex;
+    align-items: center;
+    height: 13%;
+    width: 90%;
+}
+
+.container-paginas a:first-child {
+    margin-top: 3%;
+}
+
+.show{
+    display: block;
+}
+
+#clock {
+    position: absolute;
+    font-size: 1.5rem;
+    top: 32.5%;
+    right: 1%;
+    color: #9900A1;
+    font-family: 'Comodore Angled', monospace;
+}
+
+.icono-menu{
+    width: 2.4vw;
+    height: 2.4vw;
+    border: solid 1px;
+    padding: 1%;
+    background-color: #9900A1;
+}
+
+.container-paginas a:hover {
+    opacity: .75;
+}
+
+.texto-menu {
+    text-align: left;
+    width: 100%;
+    padding-left: 1rem;
+    font-size: 3vh;
+}

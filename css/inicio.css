@@ -1,0 +1,438 @@
+/* Definición de fuente personalizada */
+@font-face {
+    font-family: 'Comodore Angled';
+    src: url(../materiales/fuentes/Commodore\ Angled\ v1.2.ttf);
+}
+
+/* Estilos globales para restablecer el margen y el relleno en todos los elementos */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    background-color: #374528;
+    color: #D605DA;
+    font-family: 'Comodore Angled', monospace;
+    font-size: 1rem; /* Texto base con unidades relativas */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    height: 100vh;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 0.4fr 0.4fr 0.4fr 0.4fr 1.4fr 0.6fr;
+    grid-template-rows: 0.6fr 0.6fr 0.6fr 0.6fr 0.4fr;
+    grid-template-areas:
+        "Folder-1 Folder-3 . . . Titulo"
+        "Folder-2 . . . . ."
+        "CV . . . . ."
+        ". . . . . ."
+        ". . . . . Trash-Can"
+        "Nav-Bar Nav-Bar Nav-Bar Nav-Bar Nav-Bar Nav-Bar";
+}
+
+
+/* Estilos generales para iconos */
+.icono {
+    width: 5vw;
+    font-size: 1.5rem; /* Tamaño de fuente relativo para iconos */
+}
+
+/* Estilos para carpetas */
+.Folder-1,
+.Folder-2,
+.Folder-3,
+.CV {
+    font-size: 1vw; /* Tamaño de fuente base */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.CV {
+    grid-area: CV;
+}
+
+a{
+    text-decoration: none;
+    color: #D605DA;
+}
+
+.container-folder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para la barra de navegación */
+.Nav-Bar {
+    grid-area: Nav-Bar;
+    background-color: #707A6A;
+    height: 10.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 4vw;
+    font-size: 1.2rem; /* Tamaño de fuente relativo para el logo */
+}
+
+/* Estilos para el título */
+.Titulo {
+    padding: 1rem 1rem 0 0;
+    grid-area: Titulo;
+    text-align: right;
+    font-size: 1.5vw;
+    text-wrap: nowrap;
+}
+
+/* Estilos para el icono del basurero */
+.Trash-Can {
+    grid-area: Trash-Can;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basurero,
+.trash-can {
+    width: 7vw;
+}
+
+.trash-can:hover {
+    background-image: url(../materiales/iconos/Trash\ Can\ Hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.trash-can:hover img {
+    opacity: 0;
+}
+
+/* Estilos para el contenedor de las carpetas */
+.carpeta-container {
+    display: none; /* Ocultar el elemento de forma predeterminada */
+    background-color: #294D55;
+    z-index: 1;
+    width: 50vw;
+    height: 50vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carpeta-container h3 {
+    width: 98%;
+    text-align: left;
+    margin: 1% 0 1% 1%;
+    font-size: 1.2rem; /* Tamaño de fuente relativo para títulos */
+}
+
+.carpeta-contenidos {
+    background-color: #717A6A;
+    margin-left: 1%;
+    height: 88%;
+    width: 98%;
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+/* Estilos para la barra de desplazamiento */
+.carpeta-contenidos::-webkit-scrollbar {
+    width: 8px;
+}
+
+.carpeta-contenidos::-webkit-scrollbar-track {
+    background-color: #7b0085;
+}
+
+.carpeta-contenidos::-webkit-scrollbar-thumb {
+    background-color: #b700bd;
+}
+
+.tab {
+    margin: 1%;
+}
+
+.tab img,
+.tab video {
+    width: 20vh;
+    height: 20vh;
+    image-rendering: crisp-edges; /* Evita la pixelación */
+    object-fit: cover;
+    font-size: 1rem; /* Tamaño de fuente relativo para descripciones de imágenes */
+}
+
+.image {
+    display: none;
+}
+
+/* Estilos para el botón de cerrar */
+.cerrar-btn {
+    background-color: red;
+    font-family: 'Comodore Angled', monospace;
+    color: black;
+    border: none;
+    width: 2.4vw;
+    height: 2.4vw;
+    font-size: 1.5rem; /* Tamaño de fuente relativo para el botón de cerrar */
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    border-radius: 0; /* Hacer el botón cuadrado */
+}
+
+.cerrar-btn:hover {
+    background-color: darkred;
+}
+
+
+.container-imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2; /* Asegúrate de que el z-index sea mayor que los otros elementos */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    pointer-events: none; /* Permite que los eventos pasen a través del modal */
+}
+
+.image-modal,
+.video-modal {
+    display: none; /* Ocultar el elemento de forma predeterminada */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    padding: 4.8vh 8px 16px 8px;
+    position: fixed;
+    z-index: 2;
+    background-color: #294D55;
+    overflow-y: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-content,
+.modal-content video {
+    max-height: 75vh;
+    width: auto;
+}
+
+.image-name {
+    position: absolute;
+    top: 1.25%; /* Ajusta la posición vertical según tus necesidades */
+    left: 2%; /* Ajusta la posición horizontal según tus necesidades */
+    font-size: 1.1rem;
+    color: #D605DA;
+}
+
+/* Estilos específicos para Folder-2 */
+.Folder-2 {
+    grid-area: Folder-2;
+}
+
+/* Copia los estilos del modal de imágenes al modal de videos */
+.video-modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    padding: 4.8vh 8px 16px 8px;
+    position: fixed;
+    z-index: 2;
+    background-color: #294D55;
+    overflow-y: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.video-modal video {
+    max-width: 50vw;
+}
+
+/* Copia los estilos del botón de cerrar al modal de videos */
+.video-modal .cerrar-btn {
+    background-color: red;
+    font-family: 'Comodore Angled', monospace;
+    color: black;
+    border: none;
+    width: 2.4vw;
+    height: 2.4vw;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 0; /* Hacer el botón cuadrado */
+}
+
+/* Copia los estilos de la imagen en el modal de imágenes al video en el modal de videos */
+.video-modal .modal-content video {
+    max-height: 75vh;
+    width: auto;
+}
+
+/* Estilos para la sección "Contacto" */
+.contacto-popup {
+    background-color: #294D55;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35vw;
+    height: 20vh;
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    height: 2.3vw;
+    width: 100%;
+}
+
+.titulo h3 {
+    width: 100%;
+}
+
+.titulo img {
+    width: 2.6vh;
+    height: 2.6vh;
+    padding: 0 .5rem;
+}
+
+.cerrar-contacto {
+    background-color: red;
+    font-family: 'Comodore Angled', monospace;
+    color: black;
+    border: none;
+    width: 2.6vw;
+    height: 2.6vw;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.contacto-container {
+    background-color: #9DB190;
+    color: #9900A1;
+    width: 97%;
+    height: 70%;
+}
+
+.contacto-container h4 {
+    font-size: 1.5rem;
+    padding-bottom: 1%;
+    margin: 0 1% 1% 1%;
+    border-bottom: #D605DA solid 1px;
+}
+
+.contacto-container p {
+    padding: 1%;
+}
+
+/* Estilos para la sección "Competiciones" */
+.competiciones-popup {
+    background-color: #294D55;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35vw;
+    height: 26vh;
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-competiciones-externo {
+    background-color: #9DB190;
+    width: 95%;
+}
+
+.container-competiciones-interno {
+    display: flex;
+    align-items: center;
+}
+
+.container-competiciones-interno img {
+    width: 15%;
+}
+
+.container-competiciones-interno h4 {
+    width: 50%;
+    padding: 0 5%;
+}
+
+/* Media query para pantallas con un ancho de 700px o menos */
+@media (max-width: 700px) {
+    /* Ajusta los estilos para el contenedor principal en resolución de 700px o menos */
+    .container {
+        grid-template-columns: repeat(6, 1fr); /* Cambia la distribución de las columnas */
+        grid-template-rows: 0.2fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr; /* Cambia la distribución de las filas */
+    }
+
+    /* Ajusta los estilos para el título en resolución de 700px o menos */
+    .Titulo {
+        font-size: 2.5vw;
+    }
+
+    /* Ajusta los estilos para los folders en resolución de 700px o menos */
+    .Folder-1,
+    .Folder-2,
+    .Folder-3 {
+        font-size: 2.5vw; /* Aumenta el tamaño de fuente */
+    }
+
+    /* Ajusta los estilos para Folder-2 en resolución de 700px o menos */
+    .Folder-2 {
+        margin-top: 0.2rem; /* Ajusta la distancia desde el Folder-1 */
+    }
+
+    /* Ajusta los estilos para el nav bar en resolución de 700px o menos */
+    .Nav-Bar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
