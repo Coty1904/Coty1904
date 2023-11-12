@@ -152,8 +152,11 @@ a:hover,
     display: none; /* Ocultar el elemento de forma predeterminada */
     background-color: #1E091E;
     z-index: 1;
-    width: 50vw;
-    height: 50vh;
+    min-width: 30vw;
+    width: fit-content;
+    max-width: 45vw;
+    height: fit-content;
+    max-height: 50vh;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -164,22 +167,30 @@ a:hover,
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1%;
+    padding-top: 0;
 }
 
-.carpeta-container h3 {
-    width: 98%;
-    text-align: left;
-    margin: 1% 0 1% 1%;
-    font-size: 1.2rem; /* Tamaño de fuente relativo para títulos */
+.titulo-carpetas {
+    margin-left: 1%;
+    height: 10%;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.titulo-carpetas h3 {
+    width: 100%;
 }
 
 .carpeta-contenidos {
     background-color: #2B0D30;
-    margin-left: 1%;
-    height: 88%;
-    width: 98%;
+    width: 100%;
+    height: 90%;
     display: flex;
-    align-items: start;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
     overflow-y: auto;
 }
@@ -220,12 +231,9 @@ a:hover,
     font-family: 'Comodore Angled', monospace;
     color: black;
     border: none;
-    width: 2.4vw;
-    height: 2.4vw;
+    width: fit-content;
+    height: fit-content;
     font-size: 1.5rem; /* Tamaño de fuente relativo para el botón de cerrar */
-    position: absolute;
-    top: 0;
-    right: 0;
     cursor: pointer;
     border-radius: 0; /* Hacer el botón cuadrado */
 }
@@ -289,19 +297,6 @@ a:hover,
     max-width: 50vw;
 }
 
-/* Copia los estilos del botón de cerrar al modal de videos */
-.video-modal .cerrar-btn {
-    background-color: red;
-    font-family: 'Comodore Angled', monospace;
-    color: black;
-    border: none;
-    width: 2.4vw;
-    height: 2.4vw;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 0; /* Hacer el botón cuadrado */
-}
-
 /* Copia los estilos de la imagen en el modal de imágenes al video en el modal de videos */
 .video-modal .modal-content video {
     max-height: 75vh;
@@ -314,53 +309,38 @@ a:hover,
     display: none;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 35vw;
-    height: 20vh;
+    width: fit-content;
+    height: fit-content;
     z-index: 1;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 1%;
+    padding-top: 0;
 }
 
 .titulo {
     display: flex;
     align-items: center;
-    height: 2.3vw;
+    height: 10%;
     width: 100%;
 }
 
 .titulo h3 {
-    width: 100%;
+    width: 95%;
 }
 
 .titulo img {
     width: 2.6vh;
     height: 2.6vh;
-    padding: 0 .5rem;
-}
-
-.cerrar-contacto {
-    background-color: red;
-    font-family: 'Comodore Angled', monospace;
-    color: black;
-    border: none;
-    width: 2.6vw;
-    height: 2.6vw;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
 }
 
 .contacto-container {
     background-color: #510c61;
     color: #9900A1;
-    width: 97%;
-    height: 70%;
+    width: 100%;
+    height: 90%;
 }
 
 .contacto-container h4 {
@@ -381,18 +361,20 @@ a:hover,
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 35vw;
-    height: 26vh;
+    width: fit-content;
+    height: fit-content;
     z-index: 1;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 0 1% 1% 1%;
 }
 
 .container-competiciones-externo {
     background-color: #510c61;
-    width: 95%;
+    width: 100%;
+    height: 95%;
 }
 
 .container-competiciones-interno {
@@ -401,12 +383,15 @@ a:hover,
 }
 
 .container-competiciones-interno img {
-    width: 15%;
+    width: 10%;
 }
 
 .container-competiciones-interno h4 {
+    width: 40%;
+}
+
+.container-competiciones-interno p {
     width: 50%;
-    padding: 0 5%;
 }
 
 /* Estilos para pantallas medianas y pequeñas */
@@ -491,7 +476,7 @@ a:hover,
         width: 90vw;
         height: fit-content;
         padding-bottom: 1.5%;
-        display: flex;
+        display: none;
     }
 
     .competiciones-popup h4 {

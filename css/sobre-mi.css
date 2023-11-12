@@ -1,6 +1,6 @@
 .sobre-mi {
     position: fixed; /* Cambiado a fixed para centrar verticalmente */
-    width: 75vw;
+    width: 80vw;
     height: 85vh;
     background-color: #1E091E;
     z-index: 3; /* Cambiado a z-index 3 */
@@ -12,18 +12,26 @@
     left: 50%; /* Centrar horizontalmente */
     transform: translate(-50%, -50%); /* Ajuste de centrado */
     color: #DD7CF6;
+    padding: 1%;
+    padding-top: 0;
 }
 
-.sobre-mi h2 {
-    font-size: 2rem;
+.sobre-mi .titulo {
+    width: 100%;
+    height: 5%;
+}
+
+.titulo h2 {
+    width: 100%;
 }
 
 .titulos {
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin-top: 1rem;
-    width: 90%;
+    width: 99.8%;
+    padding-top: 1%;
+    height: 5%;
 }
 
 .titulos h3 {
@@ -54,8 +62,8 @@
 }
 
 .container-about {
-    width: 95%;
-    height: 80%;
+    width: 99%;
+    height: 90%;
     background-color: #210A24;
     border: 3px solid #B626C9;
     display: none;
