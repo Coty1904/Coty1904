@@ -12,10 +12,20 @@
 
 /* Estilos generales para el cuerpo de la página */
 body {
-    background-color: #374528;
+    background-color: #2C0231;
     color: #D605DA;
     font-family: 'Comodore Angled', monospace;
-    font-size: 1rem; /* Texto base con unidades relativas */
+    font-size: 1rem; /* Texto base con unidades relativas */	
+}
+
+a{
+    text-decoration: none;
+    color: #D605DA;
+}
+
+
+.Custom-Cursor {
+    cursor: url('../materiales/cursor/cursor-default.png'), default;
 }
 
 /* Estilos para el contenedor principal */
@@ -38,7 +48,6 @@ body {
 /* Estilos generales para iconos */
 .icono {
     width: 5vw;
-    font-size: 1.5rem; /* Tamaño de fuente relativo para iconos */
 }
 
 /* Estilos para carpetas */
@@ -58,9 +67,15 @@ body {
     grid-area: CV;
 }
 
-a{
-    text-decoration: none;
-    color: #D605DA;
+
+button:hover, 
+a:hover,
+.container-folder:hover,
+.CV:hover,
+.basurero:hover,
+.tab:hover,
+.pestaña:hover {
+    cursor: url('../materiales/cursor/cursor-pointer.png'), auto;
 }
 
 .container-folder {
@@ -75,12 +90,22 @@ a{
 /* Estilos para la barra de navegación */
 .Nav-Bar {
     grid-area: Nav-Bar;
-    background-color: #707A6A;
+    background-color: #e6ccd1;
     height: 10.5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+}
+
+.fa {
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    gap: 1rem   ;
 }
 
 .logo {
@@ -125,7 +150,7 @@ a{
 /* Estilos para el contenedor de las carpetas */
 .carpeta-container {
     display: none; /* Ocultar el elemento de forma predeterminada */
-    background-color: #294D55;
+    background-color: #1E091E;
     z-index: 1;
     width: 50vw;
     height: 50vh;
@@ -149,7 +174,7 @@ a{
 }
 
 .carpeta-contenidos {
-    background-color: #717A6A;
+    background-color: #2B0D30;
     margin-left: 1%;
     height: 88%;
     width: 98%;
@@ -209,7 +234,6 @@ a{
     background-color: darkred;
 }
 
-
 .container-imagenes {
     display: flex;
     justify-content: center;
@@ -220,7 +244,6 @@ a{
     right: 0;
     bottom: 0;
     z-index: 2; /* Asegúrate de que el z-index sea mayor que los otros elementos */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
     pointer-events: none; /* Permite que los eventos pasen a través del modal */
 }
 
@@ -235,7 +258,7 @@ a{
     padding: 4.8vh 8px 16px 8px;
     position: fixed;
     z-index: 2;
-    background-color: #294D55;
+    background-color: #370B41;
     overflow-y: auto;
     top: 50%;
     left: 50%;
@@ -244,6 +267,7 @@ a{
 
 .modal-content,
 .modal-content video {
+    background-color: #510c61;
     max-height: 75vh;
     width: auto;
 }
@@ -259,24 +283,6 @@ a{
 /* Estilos específicos para Folder-2 */
 .Folder-2 {
     grid-area: Folder-2;
-}
-
-/* Copia los estilos del modal de imágenes al modal de videos */
-.video-modal {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: fit-content;
-    height: fit-content;
-    padding: 4.8vh 8px 16px 8px;
-    position: fixed;
-    z-index: 2;
-    background-color: #294D55;
-    overflow-y: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .video-modal video {
@@ -304,7 +310,7 @@ a{
 
 /* Estilos para la sección "Contacto" */
 .contacto-popup {
-    background-color: #294D55;
+    background-color: #1E091E;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -351,7 +357,7 @@ a{
 }
 
 .contacto-container {
-    background-color: #9DB190;
+    background-color: #510c61;
     color: #9900A1;
     width: 97%;
     height: 70%;
@@ -370,7 +376,7 @@ a{
 
 /* Estilos para la sección "Competiciones" */
 .competiciones-popup {
-    background-color: #294D55;
+    background-color: #1E091E;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -385,7 +391,7 @@ a{
 }
 
 .container-competiciones-externo {
-    background-color: #9DB190;
+    background-color: #510c61;
     width: 95%;
 }
 
@@ -403,36 +409,110 @@ a{
     padding: 0 5%;
 }
 
-/* Media query para pantallas con un ancho de 700px o menos */
-@media (max-width: 700px) {
-    /* Ajusta los estilos para el contenedor principal en resolución de 700px o menos */
-    .container {
-        grid-template-columns: repeat(6, 1fr); /* Cambia la distribución de las columnas */
-        grid-template-rows: 0.2fr 0.6fr 0.6fr 0.6fr 0.6fr 0.6fr; /* Cambia la distribución de las filas */
+/* Estilos para pantallas medianas y pequeñas */
+@media screen and (orientation:portrait)  {
+    .container{
+        grid-template-columns: 0.5fr 0.5fr 0.2fr 0.4fr 1.4fr 0.6fr;
+        grid-template-rows: 0.4fr 0.4fr 0.5fr 1.1fr 0.4fr;
     }
 
-    /* Ajusta los estilos para el título en resolución de 700px o menos */
-    .Titulo {
-        font-size: 2.5vw;
+    .icono,
+    .basurero,
+    .trash-can {
+        width: 10vh;
+        height: 10vh;
     }
 
-    /* Ajusta los estilos para los folders en resolución de 700px o menos */
     .Folder-1,
     .Folder-2,
+    .Folder-3,
+    .CV,
+    .Titulo {
+        font-size: 1.5vh;
+    }
+
+    .Titulo {
+        margin-top: 10%;
+    }
+
     .Folder-3 {
-        font-size: 2.5vw; /* Aumenta el tamaño de fuente */
+        margin-left: 30%;
     }
 
-    /* Ajusta los estilos para Folder-2 en resolución de 700px o menos */
-    .Folder-2 {
-        margin-top: 0.2rem; /* Ajusta la distancia desde el Folder-1 */
+    .carpeta-container {
+        padding-bottom: 2%;
+        height: fit-content;
+        max-height: 50vh;
+        align-items: center;
+        justify-content: center;
     }
 
-    /* Ajusta los estilos para el nav bar en resolución de 700px o menos */
-    .Nav-Bar {
-        position: fixed;
-        bottom: 0;
+    .carpeta-container h3 {
+        padding-left: 2%;
+    }
+
+    .titulo-carpetas, .titulo{
         width: 100%;
+        height: fit-content;
     }
-}
+    
+    .cerrar-btn {
+        width: fit-content;
+        height: fit-content;
+    }
 
+    .carpeta-contenidos {
+        width: 90%;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .image-modal,
+    .video-modal {
+        width: 50vh;
+        height: 50vh;
+        justify-content: center;
+        align-items: center;
+        background-color: #370B41;
+
+    }
+
+    .modal-content {
+        width: 50vh;
+        height: 50vh;
+        object-fit: contain;
+    }
+
+    .modal-content::-webkit-scrollbar { 
+        display: none;
+    }
+
+    .contacto-popup, .competiciones-popup{
+        width: 90vw;
+        height: fit-content;
+        padding-bottom: 1.5%;
+        display: flex;
+    }
+
+    .competiciones-popup h4 {
+        font-size: 2vh;
+        width: 45%;
+    }
+
+    .competiciones-popup p {
+        width: 40%;
+    }
+
+    .competiciones-popup img {
+        width: 15%;
+    }
+
+    .titulo{
+        padding: 1% 0;
+    }
+
+    .titulo img {
+        width: auto;
+    }
+    
+}

@@ -1,10 +1,10 @@
 // Folder Foto
 function toggleFotos() {
     var carpetaFotos = document.getElementById("carpeta-fotos");
-    if (carpetaFotos.style.display === "block") {
+    if (carpetaFotos.style.display === "flex") {
         carpetaFotos.style.display = "none";
     } else {
-        carpetaFotos.style.display = "block";
+        carpetaFotos.style.display = "flex";
     }
 }
 
@@ -21,7 +21,7 @@ function openImage(imageSrc, imageName) {
 
     modalImage.src = imageSrc;
     modalImageName.innerText = imageName; // Establece el nombre de la imagen
-    modal.style.display = "block";
+    modal.style.display = "flex";
 }
 
 function closeImage() {
@@ -34,10 +34,10 @@ function closeImage() {
 // Folder video
 function toggleVideos() {
     var carpetaVideos = document.getElementById("carpeta-videos");
-    if (carpetaVideos.style.display === "block") {
+    if (carpetaVideos.style.display === "flex") {
         carpetaVideos.style.display = "none";
     } else {
-        carpetaVideos.style.display = "block";
+        carpetaVideos.style.display = "flex";
     }
 }
 
@@ -67,10 +67,10 @@ function closeVideo() {
 //Planes
 function togglePlanes(){
     var carpetaPlanes = document.getElementById("carpeta-planes");
-    if (carpetaPlanes.style.display === "block") {
+    if (carpetaPlanes.style.display === "flex") {
         carpetaPlanes.style.display = "none";
     } else {
-        carpetaPlanes.style.display = "block";
+        carpetaPlanes.style.display = "flex";
     }
 }
 

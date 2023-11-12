@@ -2,7 +2,7 @@
     position: fixed; /* Cambiado a fixed para centrar verticalmente */
     width: 75vw;
     height: 85vh;
-    background-color: #294D55;
+    background-color: #1E091E;
     z-index: 3; /* Cambiado a z-index 3 */
     display: none;
     justify-content: center;
@@ -11,6 +11,7 @@
     top: 45%; /* Centrar verticalmente */
     left: 50%; /* Centrar horizontalmente */
     transform: translate(-50%, -50%); /* Ajuste de centrado */
+    color: #DD7CF6;
 }
 
 .sobre-mi h2 {
@@ -28,7 +29,7 @@
 .titulos h3 {
     display: flex;
     align-items: center;
-    background-color: #697C5E;
+    background-color: #370B41;
     border-radius: 1rem 1rem 0 0;
     height: 4.5vh;
     width: 15%;
@@ -36,13 +37,11 @@
 }
 
 .titulos h3:hover {
-    cursor: pointer;
     opacity: 0.7;
 }
 
 .titulos .Active {
-    background-color: #A4AE9D;
-    opacity: 0.8;
+    background-color: #B626C9;
     height: 4.5vh;
     display: flex;
     align-items: center;
@@ -57,7 +56,8 @@
 .container-about {
     width: 95%;
     height: 80%;
-    background-color: #9DB190;
+    background-color: #210A24;
+    border: 3px solid #B626C9;
     display: none;
     z-index: 3;
 }
@@ -69,15 +69,15 @@
     overflow-y: auto;
 }
 
-.General::-webkit-scrollbar {
+.container-about::-webkit-scrollbar {
     width: 8px;
 }
 
-.General::-webkit-scrollbar-track {
+.container-about::-webkit-scrollbar-track {
     background-color: #7b0085;
 }
 
-.General::-webkit-scrollbar-thumb {
+.container-about::-webkit-scrollbar-thumb {
     background-color: #b700bd;
 }
 
@@ -100,23 +100,23 @@
 
 .General-texto h4 {
     width: 100%; /* Ajusta el ancho del h4 para ocupar todo el espacio restante */
-    background-color: #717A6A;
+    background-color: #2B0D30;
     font-size: 2rem;
     text-align: center;
-    border: 2px solid #D605DA;
-    box-shadow: 3px 3px #9900A1;
-    color: #9900A1;
+    border: 2px solid #EA85F9;
+    box-shadow: 3px 3px #B93ECC;
+    color: #F194FF;
     padding: 1rem;
 }
 
 .General-texto p {
     width: 100%; /* Ajusta el ancho del párrafo para ocupar todo el espacio restante */
-    background-color: #717A6A;
+    background-color: #2B0D30;
     font-size: 1.2rem;
-    border: 2px solid #D605DA;
-    box-shadow: 3px 3px #9900A1;
+    border: 2px solid #EA85F9;
+    box-shadow: 3px 3px #B93ECC;
     padding: 1rem;
-    color: #5D006B;
+    color: #F194FF;
     text-align: justify;
 }
 
@@ -141,4 +141,51 @@
 
 .cerrar-sobre-mi:hover {
     background-color: darkred;
+}
+
+@media screen and (orientation: portrait) {
+    .sobre-mi {
+        width: 90vw;
+        height: 80vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .titulos {
+        gap: 1rem;
+        font-size: 1rem;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .titulos::-webkit-scrollbar{
+        display: none;
+    }
+
+    .titulos h3 {
+        width: fit-content;
+    }
+
+    .General img {
+        display: none;
+    }
+
+    .General-texto {
+        width: 80%;
+    }
+
+    .General-texto h4 {
+        font-size: 4vh;
+    }
+
+    .General-texto p {
+        font-size: 2.5vh;
+    }
+
+    .cerrar-sobre-mi {
+        width: 6vw;
+        height: 6vw;
+        font-size: 3vw;
+    }
 }

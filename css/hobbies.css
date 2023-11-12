@@ -6,7 +6,7 @@
     height: 80%;
     position: relative;
     overflow: hidden;
-    color: #9900A1;
+    color: #F194FF;
     overflow-y: unset;
 }
 
@@ -44,4 +44,31 @@
     list-style: none;
     font-size: 1.2rem;
     padding-top: .5rem;
+}
+
+@media screen and (orientation:portrait) {
+    
+    .Hobbies h4 {
+        font-size: 4vh;
+        margin-top: 60%;
+    }
+
+    .container-hobbie {
+        padding-bottom: 5%;
+        flex-wrap: wrap;
+    }
+
+    .container-hobbie img{
+        padding: 0;
+        width: 20%;
+    }
+
+    .container-hobbie h5{
+        font-size: 3vh;
+    }
+
+    .container-hobbie ul {
+        width: 100%;
+        text-align: center;
+    }
 }

@@ -1,9 +1,15 @@
+.centrar-nav{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
 .dropbtn{
-    color: #D605DA;
-    background-color: #002028;
+    color: #620477;
+    background-color: #f7f1f8;
     font-family: 'Comodore Angled', monospace;
     height: 100%;
-    width: 15%;
+    width: fit-content;
     display: flex;
     align-items: center;
     gap: 5%;
@@ -24,29 +30,33 @@
 }
 
 .nav-bar-menu{
-    background-color: #294D55;
+    color: #e587fb;
+    background-color: #1F1122;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 25vw;
-    height: 60vh;
+    width: fit-content;
+    height: fit-content;
+    padding: 2%;
 }
 
 .container-titulos {
     display: flex;
     align-items: center;
-    padding-top: 1rem;
+    padding: 3%;
+    padding-bottom: 0;
+    gap: 1rem;
 }
 
 .container-titulos h3 {
+    font-size: 3vh;
     width: min-content;
-    padding: 0 5vw 0 0;
 }
 
 .container-titulos img {
-    border-radius: 1rem;
-    border: 2px solid black;
+    border-radius: 5px;
+    border: 2px solid #9C53AC;
     width: 5vw;
     height: 5vw;
     overflow: hidden;
@@ -56,28 +66,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #6A867F;
+    background-color: #3E2640;
     margin-top: 5%;
     height: 77%;
     width: 95%;
 }
 
 .container-paginas a {
-    margin-bottom: 3%;
-    background-color: #9DB190;
+    margin: 2% 0;
+    background-color: #EAC4F2;
     color: #9900A1;
-    /* padding-left: 3%; */
     text-decoration: none;
-    font-size: 3.5vh;
     display: flex;
     align-items: center;
-    height: 13%;
     width: 90%;
 }
 
-.container-paginas a:first-child {
-    margin-top: 3%;
+a {
+    height: 5vh;
 }
+
 
 .show{
     display: block;
@@ -86,18 +94,15 @@
 #clock {
     position: absolute;
     font-size: 1.5rem;
-    top: 32.5%;
     right: 1%;
     color: #9900A1;
     font-family: 'Comodore Angled', monospace;
 }
 
 .icono-menu{
-    width: 2.4vw;
-    height: 2.4vw;
-    border: solid 1px;
-    padding: 1%;
-    background-color: #9900A1;
+    width: 4.8vh;
+    height: 5vh;
+    background-color: #9C53AC;
 }
 
 .container-paginas a:hover {
@@ -106,7 +111,70 @@
 
 .texto-menu {
     text-align: left;
-    width: 100%;
-    padding-left: 1rem;
-    font-size: 3vh;
+    padding-left: 4%;
+    font-size: 2.5vh;
 }
+
+a:last-child .texto-menu {
+    font-size: 2.4vh;
+}
+
+/* Estilos para pantallas medianas y pequeñas */
+@media screen and (orientation:portrait)  {
+    /* Nav-Bar */
+    .Nav-Bar{
+        height: 10vh;
+    }
+
+    .Nav-Bar button {
+      width: fit-content;
+    }
+  
+    .Nav-Bar h2{
+      display: none;
+    }
+    
+    .logo {
+        width: 7.5vh;
+        padding: 1%;
+    }
+
+    /* Nav-Bar Menú */
+    .nav-bar-menu{
+        width: 60VW;
+        height: fit-content;
+        padding: 0 1%;
+    }
+
+    .container-titulos {
+        width: min-content;
+        margin: 1%;
+    }
+
+    .container-titulos h3 {
+        padding: 0;
+        text-align: center;
+        width: 90%;  
+        font-size: 3vh;      
+    }
+
+    .container-titulos img {
+        display: none;
+    }
+
+    .texto-menu {
+        display: none;
+        width: 0%;
+    }
+
+    .icono-menu {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    /* Reloj */
+    #clock {
+        font-size: 4vh;
+    }
+}
+    

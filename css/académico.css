@@ -6,7 +6,7 @@
     height: 80%;
     position: relative;
     overflow: hidden;
-    color: #9900A1;
+    color: #F194FF;
     overflow-y: unset;
 }
 
@@ -22,7 +22,7 @@
     content: '';
     position: absolute;
     width: 6px;
-    background-color: #7b0085;
+    background-color: #B93ECC;
     top: 5%;
     bottom: 5%;
     left: 50%;
@@ -74,10 +74,9 @@
 
 .contenido {
     padding: 20px 30px;
-    background-color: #6A867F;
+    background-color: #6A0679;
     position: relative;
     border-radius: 6px;
-    box-shadow: 0px 5px 5px rgba(214, 5, 218, 0.4); /* Agregamos un box-shadow suave */
 }
 
 /* Estilo para la flecha en los elementos "izq" */
@@ -88,11 +87,10 @@
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid #6A867F;
+    border-bottom: 10px solid #6A0679;
     top: 50%;
     right: -10px;
     transform: translateY(-50%);
-    box-shadow: -2px 3px 5px rgba(214, 5, 218, 0.4); /* Agregamos un box-shadow a la flecha */
 }
 
 /* Estilo para la flecha en los elementos "der" */
@@ -103,11 +101,10 @@
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid #6A867F;
+    border-bottom: 10px solid #6A0679;
     top: 50%;
     left: -10px;
     transform: translateY(-50%);
-    box-shadow: 2px 3px 5px rgba(214, 5, 218, 0.4); /* Agregamos un box-shadow a la flecha */
 }
 
 .Académico h3 {
@@ -120,14 +117,56 @@
     font-size: 2rem;
 }
 
-.Académico::-webkit-scrollbar{
-    width: 8px;
+.responsive-container {
+    display: none;
 }
 
-.Académico::-webkit-scrollbar-track {
-    background-color: #7b0085;
-}
+@media screen and (orientation: portrait) {
+    .Académico h3 {
+        font-size: 4vh;
+    }
 
-.Académico::-webkit-scrollbar-thumb {
-    background-color: #b700bd;
+    .timeline {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .timeline::after {
+        top: 15%;
+        left: 5%;
+        margin-left: 0;
+        height: 140%;
+    }
+
+    .izq-container, .der-container {
+        display: none;
+    }
+
+    .responsive-container {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        height: max-content;
+        gap: 5%;
+        padding: 2% 0;
+    }
+
+    .responsive-container .contenido{
+        margin: 2% 0;
+    }
+
+    .responsive-container .contenido::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #6A0679;
+        top: 50%;
+        left: -10px;
+        transform: translateY(-50%);
+    }
+
 }

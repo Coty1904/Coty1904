@@ -13,7 +13,7 @@
 
     <title>Constantino Carracedo</title>
 </head>
-<body>
+<body class="Custom-Cursor">
 
     <!-- Modal de imagen -->
     <div class="image-modal" id="image-modal">
@@ -35,17 +35,17 @@
             <h1>Coty OS</h1>
         </div>
 
-        <div class="Folder-1" onclick="toggleFotos()">
+        <div class="Folder-1">
             <!-- Carpeta de Fotos -->
-            <div class="container-folder">
+            <div class="container-folder" onclick="toggleFotos()">
                 <img class="icono" src="./materiales/iconos/Folder (Content).png" alt="Folder (Content)">
                 <h2>Fotos</h2>
             </div>
         </div>
         
         <!-- Carpeta de Videos -->
-        <div class="Folder-2" onclick="toggleVideos()">
-            <div class="container-folder">
+        <div class="Folder-2">
+            <div class="container-folder" onclick="toggleVideos()">
                 <img class="icono" src="./materiales/iconos/Folder (Content).png" alt="Folder (Content)">
                 <h2>Videos</h2>
             </div>
@@ -62,8 +62,8 @@
         </div>
 
         <!-- Carpeta de Planes Secretos -->
-        <div class="Folder-3" onclick="togglePlanes()">
-            <div class="container-folder">
+        <div class="Folder-3">
+            <div class="container-folder" onclick="togglePlanes()">
                 <img class="icono" src="./materiales/iconos/Folder (Empty).png" alt="Folder (Empty)">
                 <h2>Planes Secretos</h2>
             </div>
@@ -77,14 +77,18 @@
         </div>
 
         <div class="Nav-Bar">
-            <!-- Botón del menú desplegable -->
-            <button onclick="myFunction()" class="dropbtn">
-                <img class="logo" src="./materiales/logo/Coty_Logo.png" alt="logo">
-                <h2>Menú</h2>
-            </button>
-        
-            <div id="clock">00:00</div>
-        
+                <!-- Botón del menú desplegable -->
+            <div class="centrar-nav">
+                <button onclick="myFunction()" class="dropbtn">
+                    <i class="fa">
+                        <img class="logo" src="./materiales/logo/Coty_Logo.png" alt="logo" onclick="myFunction()">
+                        <h2 clase="menu" onclick="myFunction()">Menú</h2>
+                    </i>
+
+                </button>
+            
+                <div id="clock">00:00</div>
+            </div>
             <div id="myDropdown" class="dropdown-content">
                 <!-- Contenido del menú desplegable -->
                 <div class="nav-bar-menu">
@@ -116,11 +120,13 @@
         </div>
 
         <div class="carpeta-container" id="carpeta-fotos">
-            <!-- Título de la carpeta de Fotos -->
-            <h3>Fotos</h3>
-            
-            <!-- Botón para cerrar la carpeta de Fotos -->
-            <button class="cerrar-btn" onclick="cerrarFotos()">X</button>
+            <div class="titulo-carpetas">
+                <!-- Título de la carpeta de Fotos -->
+                <h3>Fotos</h3>
+                
+                <!-- Botón para cerrar la carpeta de Fotos -->
+                <button class="cerrar-btn" onclick="cerrarFotos()">X</button>
+            </div>
             
             <!-- Contenido de la carpeta de Fotos -->
             <div class="carpeta-contenidos">
@@ -185,11 +191,6 @@
                     <video src="./materiales/videos/Revolución Industrial.mp4" alt="Revolución Industrial">
                 </div>
                 
-                <!-- Video 2: El superhombre, en 2001 Odisea en el espacio -->
-                <div class="tab" onclick="openVideo('./materiales/videos/El superhombre, en 2001 Odisea en el espacio.mp4', 'El superhombre, en 2001 Odisea en el espacio')">
-                    <video src="./materiales/videos/El superhombre, en 2001 Odisea en el espacio.mp4" alt="El superhombre, en 2001 Odisea en el espacio">
-                </div>
-                
             </div>
         </div>
         
@@ -210,13 +211,13 @@
         <!-- Sección "Sobre Mí" - Pertenece al menú del navbar -->
         <div class="sobre-mi">
             <h2>Sobre Mi</h2>
-            <div class="cerrar-sobre-mi" onclick="cerrarSobreMi()">X</div>
+            <button class="cerrar-btn" onclick="cerrarSobreMi()">X</button>
             
             <!-- Titulos de las secciones -->
             <div class="titulos">
-                <h3 class="Active">General</h3>
-                <h3>Académico</h3>
-                <h3>Hobbies</h3>
+                <h3 class="pestaña Active">General</h3>
+                <h3 class="pestaña">Académico</h3>
+                <h3 class="pestaña">Hobbies</h3>
             </div>
             
             <!-- Sección "General" (activo por defecto) -->
@@ -261,6 +262,24 @@
                                 <h4>Septiembre 2023</h4>
                                 <p>Segundo Lugar en Deep Racer, una competición de autos autónomos.</p>
                             </div>
+                        </div>
+                    </div>
+                    <div class="responsive-container">
+                        <div class="contenido">
+                            <h4>Marzo 2022</h4>
+                            <p>Comunicación Audiovisual en Universidad de Palermo</p>
+                        </div>
+                        <div class="contenido">
+                            <h4>Marzo 2023</h4>
+                            <p>Lic. en Gestión de Sistemas de la Información en UADE (Universidad Argentina de la Empresa)</p>
+                        </div>
+                        <div class="contenido">
+                            <h4>Junio 2022</h4>
+                            <p>Noveno lugar en la segunda copa de programación de Python.</p>
+                        </div>
+                        <div class="contenido">
+                            <h4>Septiembre 2023</h4>
+                            <p>Segundo Lugar en Deep Racer, una competición de autos autónomos.</p>
                         </div>
                     </div>
                 </div>
@@ -309,7 +328,7 @@
             <div class="titulo">
                 <img src="./materiales/iconos/Contact.png" alt="contacto icono">
                 <h3>Contacto</h3>
-                <button class="cerrar-contacto" onclick="cerrarContacto()">X</button>
+                <button class="cerrar-btn" onclick="cerrarContacto()">X</button>
             </div>
             <div class="contacto-container">
                 <h4>Contacto</h4>
@@ -323,7 +342,7 @@
             <div class="titulo">
                 <img src="./materiales/iconos/Trophy.png" alt="Trophy">
                 <h3>Competiciones</h3>
-                <button class="cerrar-contacto" onclick="cerrarCompeticiones()">X</button>
+                <button class="cerrar-btn" onclick="cerrarCompeticiones()">X</button>
             </div>
             <div class="container-competiciones-externo">
                 <div class="container-competiciones-interno">
