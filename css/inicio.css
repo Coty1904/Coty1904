@@ -216,7 +216,6 @@ a:hover,
 .tab video {
     width: 20vh;
     height: 20vh;
-    image-rendering: crisp-edges; /* Evita la pixelación */
     object-fit: cover;
     font-size: 1rem; /* Tamaño de fuente relativo para descripciones de imágenes */
 }
@@ -405,7 +404,7 @@ a:hover,
 }
 
 /* Estilos para pantallas medianas y pequeñas */
-@media screen and (orientation:portrait)  {
+@media screen and (max-width:700px)  {
     .container{
         grid-template-columns: 0.5fr 0.5fr 0.2fr 0.4fr 1.4fr 0.6fr;
         grid-template-rows: 0.4fr 0.4fr 0.5fr 1.1fr 0.4fr;
@@ -465,7 +464,7 @@ a:hover,
     .image-modal,
     .video-modal {
         width: 50vh;
-        height: 50vh;
+        height: fit-content;
         justify-content: center;
         align-items: center;
         background-color: #370B41;
@@ -476,10 +475,6 @@ a:hover,
         width: 50vh;
         height: 50vh;
         object-fit: contain;
-    }
-
-    .modal-content::-webkit-scrollbar { 
-        display: none;
     }
 
     .contacto-popup, .competiciones-popup{
@@ -509,5 +504,4 @@ a:hover,
     .titulo img {
         width: auto;
     }
-    
 }
