@@ -49,7 +49,7 @@
     
     .Hobbies h4 {
         font-size: 4vh;
-        margin-top: 60%;
+        margin-top: 30%;
     }
 
     .container-hobbie {
@@ -68,6 +68,5 @@
 
     .container-hobbie ul {
         width: 100%;
-        text-align: center;
     }
 }

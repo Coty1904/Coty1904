@@ -17,16 +17,20 @@
 
     <!-- Modal de imagen -->
     <div class="image-modal" id="image-modal">
-        <button class="cerrar-btn" id="cerrar-modal-btn" onclick="closeImage()">X</button>
-        <h2 class="image-name" id="modal-image-name"></h2>
+        <div class="titulo-modal">
+            <h2 class="image-name" id="modal-image-name"></h2>
+            <button class="cerrar-btn" id="cerrar-modal-btn" onclick="closeImage()">X</button>
+        </div>
         <img class="modal-content" id="modal-image" src="" alt="">
     </div>
     
     <!-- Modal de video -->
     <div id="video-modal" class="video-modal">
-        <button class="cerrar-btn" onclick="closeVideo()">X</button>
+        <div class="titulo-modal">
+            <h2 class="image-name" id="video-name"></h2>
+            <button class="cerrar-btn" onclick="closeVideo()">X</button>
+        </div>
         <video id="video-player" controls></video>
-        <h2 class="image-name" id="video-name"></h2>
     </div>
 
     <div class="container">
@@ -84,7 +88,6 @@
                         <img class="logo" src="./materiales/logo/Coty_Logo.png" alt="logo" onclick="myFunction()">
                         <h2 clase="menu" onclick="myFunction()">Menú</h2>
                     </i>
-
                 </button>
             
                 <div id="clock">00:00</div>
@@ -192,7 +195,6 @@
                 <div class="tab" onclick="openVideo('./materiales/videos/Revolución Industrial.mp4', 'Revolución Industrial')">
                     <video src="./materiales/videos/Revolución Industrial.mp4" alt="Revolución Industrial">
                 </div>
-                
             </div>
         </div>
         

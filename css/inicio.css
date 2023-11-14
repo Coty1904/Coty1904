@@ -263,7 +263,8 @@ a:hover,
     flex-direction: column;
     width: fit-content;
     height: fit-content;
-    padding: 4.8vh 8px 16px 8px;
+    padding: 1%;
+    padding-top: 0;
     position: fixed;
     z-index: 2;
     background-color: #370B41;
@@ -271,6 +272,18 @@ a:hover,
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.titulo-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.titulo-modal h2 {
+    width: 100%;
 }
 
 .modal-content,
@@ -281,9 +294,6 @@ a:hover,
 }
 
 .image-name {
-    position: absolute;
-    top: 1.25%; /* Ajusta la posición vertical según tus necesidades */
-    left: 2%; /* Ajusta la posición horizontal según tus necesidades */
     font-size: 1.1rem;
     color: #D605DA;
 }
