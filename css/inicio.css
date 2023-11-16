@@ -157,7 +157,6 @@ a:hover,
     max-width: 45vw;
     height: fit-content;
     max-height: 50vh;
-    overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
@@ -172,10 +171,8 @@ a:hover,
 }
 
 .titulo-carpetas {
-    margin-left: 1%;
     height: 10%;
     width: 100%;
-    height: 10%;
     display: flex;
     align-items: center;
 }
@@ -186,13 +183,15 @@ a:hover,
 
 .carpeta-contenidos {
     background-color: #2B0D30;
-    width: 100%;
-    height: 90%;
+    max-width: 100%;
+    max-height: 45vh;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
-    overflow-y: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
 }
 
 /* Estilos para la barra de desplazamiento */
@@ -212,12 +211,16 @@ a:hover,
     margin: 1%;
 }
 
-.tab img,
-.tab video {
+.tab img {
     width: 20vh;
     height: 20vh;
     object-fit: cover;
     font-size: 1rem; /* Tamaño de fuente relativo para descripciones de imágenes */
+}
+
+.tab .Thumbnail {
+    height: fit-content;
+    object-fit: contain;
 }
 
 .image {
@@ -277,12 +280,13 @@ a:hover,
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    text-wrap: wrap;
     width: 100%;
 }
 
 .titulo-modal h2 {
-    width: 100%;
+    width: 90%;
 }
 
 .modal-content,
@@ -434,15 +438,10 @@ a:hover,
     }
 
     .carpeta-container {
-        padding-bottom: 2%;
-        height: fit-content;
-        max-height: 50vh;
+        padding: 2%;
+        padding-top: 0;
         align-items: center;
         justify-content: center;
-    }
-
-    .carpeta-container h3 {
-        padding-left: 2%;
     }
 
     .titulo-carpetas, .titulo{
@@ -456,14 +455,16 @@ a:hover,
     }
 
     .carpeta-contenidos {
-        width: 90%;
+        display: flex;
+        width: 100%;
+        height: fit-content;
         justify-content: center;
         margin: 0;
     }
 
     .image-modal,
     .video-modal {
-        width: 50vh;
+        width: fit-content;
         height: fit-content;
         justify-content: center;
         align-items: center;
@@ -472,8 +473,8 @@ a:hover,
     }
 
     .modal-content {
-        width: 50vh;
-        height: 50vh;
+        width: 50vw;
+        height: 50vw;
         object-fit: contain;
     }
 
@@ -504,4 +505,13 @@ a:hover,
     .titulo img {
         width: auto;
     }
+
+    .tab {
+        max-height: 25%;
+    }
+
+    #thumbnail {
+        object-fit: contain;
+    }
+
 }
