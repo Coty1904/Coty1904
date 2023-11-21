@@ -1,0 +1,79 @@
+/* Estilo para la clase principal 'Hobbies' */
+.Hobbies {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    color: #F194FF;
+    overflow-y: unset; /* No es necesario, ya que 'overflow-y' ya está establecido como 'hidden' */
+}
+
+/* Estilo para los encabezados h4 dentro de 'Hobbies' */
+.Hobbies h4 {
+    padding: 1%;
+    text-align: center;
+    width: 90%;
+    border-bottom: 3px solid;
+    margin: 2% 0;
+    font-size: 2rem;
+}
+
+/* Estilo para el contenedor 'container-hobbie' */
+.container-hobbie {
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para las imágenes dentro de 'container-hobbie' */
+.container-hobbie img {
+    width: 10%;
+    padding: 1rem;
+}
+
+/* Estilo para los encabezados h5 dentro de 'container-hobbie' */
+.container-hobbie h5 {
+    font-size: 1.5rem;
+    padding: 2rem;
+    width: 40%;
+}
+
+/* Estilo para las listas no ordenadas dentro de 'container-hobbie' */
+.container-hobbie ul {
+    width: 50%;
+}
+
+/* Estilo para los elementos de lista dentro de 'container-hobbie' */
+.container-hobbie li {
+    list-style: none;
+    font-size: 1.2rem;
+    padding-top: 0.5rem; /* Se ajustó la sintaxis para mayor consistencia */
+}
+
+/* Estilos específicos para pantallas en modo retrato */
+@media screen and (orientation: portrait) {
+    .Hobbies h4 {
+        font-size: 4vh;
+        margin-top: 30%;
+    }
+
+    .container-hobbie {
+        padding-bottom: 5%;
+        flex-wrap: wrap;
+    }
+
+    .container-hobbie img {
+        padding: 0;
+        width: 20%;
+    }
+
+    .container-hobbie h5 {
+        font-size: 2.7vh;
+    }
+
+    .container-hobbie ul {
+        width: 100%;
+    }
+}

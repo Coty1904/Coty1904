@@ -1,0 +1,530 @@
+/* Definición de fuente personalizada */
+@font-face {
+    font-family: 'Comodore Angled';
+    src: url(../materiales/fuentes/Commodore\ Angled\ v1.2.ttf);
+}
+
+/* Estilos globales para restablecer el margen y el relleno en todos los elementos */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    background-color: #2C0231;
+    color: #D605DA;
+    font-family: 'Comodore Angled', monospace;
+    font-size: 1rem; /* Texto base con unidades relativas */	
+}
+
+a{
+    text-decoration: none;
+    color: #D605DA;
+}
+
+
+.Custom-Cursor {
+    cursor: url('../materiales/cursor/cursor-default.png'), default;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    height: 100vh;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 0.4fr 0.4fr 0.4fr 0.4fr 1.4fr 0.6fr;
+    grid-template-rows: 0.6fr 0.6fr 0.6fr 0.6fr 0.4fr;
+    grid-template-areas:
+        "Folder-1 Folder-3 . . . Titulo"
+        "Folder-2 . . . . ."
+        "CV . . . . ."
+        ". . . . . ."
+        ". . . . . Trash-Can"
+        "Nav-Bar Nav-Bar Nav-Bar Nav-Bar Nav-Bar Nav-Bar";
+}
+
+
+/* Estilos generales para iconos */
+.icono {
+    width: 5vw;
+}
+
+/* Estilos para carpetas */
+.Folder-1,
+.Folder-2,
+.Folder-3,
+.CV {
+    font-size: 1vw; /* Tamaño de fuente base */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.CV {
+    grid-area: CV;
+}
+
+
+button:hover, 
+a:hover,
+.container-folder:hover,
+.CV:hover,
+.basurero:hover,
+.tab:hover,
+.pestaña:hover {
+    cursor: url('../materiales/cursor/cursor-pointer.png'), auto;
+}
+
+.container-folder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para la barra de navegación */
+.Nav-Bar {
+    grid-area: Nav-Bar;
+    background-color: #e6ccd1;
+    height: 10.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.fa {
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    gap: 1rem   ;
+}
+
+.logo {
+    width: 4vw;
+    font-size: 1.2rem; /* Tamaño de fuente relativo para el logo */
+}
+
+/* Estilos para el título */
+.Titulo {
+    padding: 1rem 1rem 0 0;
+    grid-area: Titulo;
+    text-align: right;
+    font-size: 1.5vw;
+    text-wrap: nowrap;
+}
+
+/* Estilos para el icono del basurero */
+.Trash-Can {
+    grid-area: Trash-Can;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basurero,
+.trash-can {
+    width: 7vw;
+}
+
+.trash-can:hover {
+    background-image: url(../materiales/iconos/Trash\ Can\ Hover.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.trash-can:hover img {
+    opacity: 0;
+}
+
+/* Estilos para el contenedor de las carpetas */
+.carpeta-container {
+    display: none; /* Ocultar el elemento de forma predeterminada */
+    background-color: #1E091E;
+    z-index: 1;
+    min-width: 30vw;
+    width: fit-content;
+    max-width: 45vw;
+    height: fit-content;
+    max-height: 50vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    padding-top: 0;
+}
+
+.titulo-carpetas {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.titulo-carpetas h3 {
+    width: 100%;
+}
+
+.carpeta-contenidos {
+    background-color: #2B0D30;
+    max-width: 100%;
+    max-height: 45vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+/* Estilos para la barra de desplazamiento */
+.carpeta-contenidos::-webkit-scrollbar {
+    width: 8px;
+}
+
+.carpeta-contenidos::-webkit-scrollbar-track {
+    background-color: #7b0085;
+}
+
+.carpeta-contenidos::-webkit-scrollbar-thumb {
+    background-color: #b700bd;
+}
+
+.tab {
+    margin: 1%;
+}
+
+.tab img {
+    width: 20vh;
+    height: 20vh;
+    object-fit: cover;
+    font-size: 1rem; /* Tamaño de fuente relativo para descripciones de imágenes */
+}
+
+.tab .Thumbnail {
+    height: fit-content;
+    object-fit: contain;
+}
+
+.image {
+    display: none;
+}
+
+/* Estilos para el botón de cerrar */
+.cerrar-btn {
+    background-color: red;
+    font-family: 'Comodore Angled', monospace;
+    color: black;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.5rem; /* Tamaño de fuente relativo para el botón de cerrar */
+    cursor: pointer;
+    border-radius: 0; /* Hacer el botón cuadrado */
+}
+
+.cerrar-btn:hover {
+    background-color: darkred;
+}
+
+.container-imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2; /* Asegúrate de que el z-index sea mayor que los otros elementos */
+    pointer-events: none; /* Permite que los eventos pasen a través del modal */
+}
+
+.image-modal,
+.video-modal {
+    display: none; /* Ocultar el elemento de forma predeterminada */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    padding: 1%;
+    padding-top: 0;
+    position: fixed;
+    z-index: 2;
+    background-color: #370B41;
+    overflow-y: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.titulo-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-wrap: wrap;
+    width: 100%;
+}
+
+.titulo-modal h2 {
+    width: 90%;
+}
+
+.modal-content,
+.modal-content video {
+    background-color: #510c61;
+    max-height: 75vh;
+    width: auto;
+}
+
+.image-name {
+    font-size: 1.1rem;
+    color: #D605DA;
+}
+
+/* Estilos específicos para Folder-2 */
+.Folder-2 {
+    grid-area: Folder-2;
+}
+
+.video-modal video {
+    max-width: 50vw;
+}
+
+/* Copia los estilos de la imagen en el modal de imágenes al video en el modal de videos */
+.video-modal .modal-content video {
+    max-height: 75vh;
+    width: auto;
+}
+
+/* Estilos para la sección "Contacto" */
+.contacto-popup {
+    background-color: #1E091E;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1%;
+    padding-top: 0;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+}
+
+.titulo h3 {
+    width: 95%;
+}
+
+.titulo img {
+    width: 2.6vh;
+    height: 2.6vh;
+}
+
+.contacto-container {
+    background-color: #510c61;
+    color: #9900A1;
+    width: 100%;
+    height: 90%;
+}
+
+.contacto-container h4 {
+    font-size: 1.5rem;
+    padding-bottom: 1%;
+    margin: 0 1% 1% 1%;
+    border-bottom: #D605DA solid 1px;
+}
+
+.contacto-container p {
+    padding: 1%;
+}
+
+/* Estilos para la sección "Competiciones" */
+.competiciones-popup {
+    background-color: #1E091E;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 1% 1% 1%;
+}
+
+.container-competiciones-externo {
+    background-color: #510c61;
+    width: 100%;
+    height: 95%;
+}
+
+.container-competiciones-interno {
+    display: flex;
+    align-items: center;
+}
+
+.container-competiciones-interno img {
+    width: 10%;
+}
+
+.container-competiciones-interno h4 {
+    width: 40%;
+}
+
+.container-competiciones-interno p {
+    width: 50%;
+}
+
+/* Estilos para pantallas medianas y pequeñas */
+@media screen and (max-width:700px)  {
+    .container{
+        grid-template-columns: 0.5fr 0.5fr 0.2fr 0.4fr 1.4fr 0.6fr;
+        grid-template-rows: 0.4fr 0.4fr 0.5fr 1.1fr 0.4fr;
+    }
+
+    .icono,
+    .basurero,
+    .trash-can {
+        width: 10vh;
+        height: 10vh;
+    }
+
+    .Folder-1,
+    .Folder-2,
+    .Folder-3,
+    .CV,
+    .Titulo {
+        font-size: 1.5vh;
+    }
+
+    .Titulo {
+        margin-top: 10%;
+    }
+
+    .Folder-3 {
+        margin-left: 30%;
+    }
+
+    .carpeta-container {
+        padding: 2%;
+        padding-top: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .titulo-carpetas, .titulo{
+        width: 100%;
+        height: fit-content;
+    }
+    
+    .cerrar-btn {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .carpeta-contenidos {
+        display: flex;
+        width: 100%;
+        height: fit-content;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .image-modal,
+    .video-modal {
+        width: fit-content;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        background-color: #370B41;
+
+    }
+
+    .modal-content {
+        width: 50vw;
+        height: 50vw;
+        object-fit: contain;
+    }
+
+    .contacto-popup, .competiciones-popup{
+        width: 90vw;
+        height: fit-content;
+        padding-bottom: 1.5%;
+        display: none;
+    }
+
+    .competiciones-popup h4 {
+        font-size: 2vh;
+        width: 45%;
+    }
+
+    .competiciones-popup p {
+        width: 40%;
+    }
+
+    .competiciones-popup img {
+        width: 15%;
+    }
+
+    .titulo{
+        padding: 1% 0;
+    }
+
+    .titulo img {
+        width: auto;
+    }
+
+    .tab {
+        max-height: 25%;
+    }
+
+    #thumbnail {
+        object-fit: contain;
+    }
+
+    .contacto-container,
+    .container-competiciones-externo {
+        height: fit-content;
+    }
+
+    .container-competiciones-interno h4 {
+        width: 50%;
+    }
+    
+    .container-competiciones-interno p {
+        width: 40%;
+        padding-left: 3%;
+    }
+}

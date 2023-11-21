@@ -1,0 +1,190 @@
+/* Estilo para centrar el contenido de la barra de navegación */
+.centrar-nav{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* Estilo para el botón principal en la barra de navegación */
+.dropbtn{
+    color: #620477;
+    background-color: #f7f1f8;
+    font-family: 'Comodore Angled', monospace;
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    padding: 0 2% 0 1%;
+    border: none;
+}
+
+/* Estilo para la barra de navegación */
+.Nav-Bar{
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo para el menú desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    bottom: 100%;
+}
+
+/* Estilo para el menú de la barra de navegación */
+.nav-bar-menu{
+    color: #e587fb;
+    background-color: #1F1122;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 2%;
+}
+
+/* Estilo para el contenedor de títulos en la barra de navegación */
+.container-titulos {
+    display: flex;
+    align-items: center;
+    padding: 3%;
+    padding-bottom: 0;
+    gap: 1rem;
+}
+
+/* Estilo para los títulos en el contenedor */
+.container-titulos h3 {
+    font-size: 3vh;
+    width: min-content;
+}
+
+/* Estilo para las imágenes en el contenedor de títulos */
+.container-titulos img {
+    border-radius: 5px;
+    border: 2px solid #9C53AC;
+    width: 5vw;
+    height: 5vw;
+    overflow: hidden;
+}
+
+/* Estilo para el contenedor de páginas */
+.container-paginas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3E2640;
+    margin-top: 5%;
+    height: 77%;
+    width: 95%;
+}
+
+/* Estilo para los enlaces en el contenedor de páginas */
+.container-paginas a {
+    margin: 2% 0;
+    background-color: #EAC4F2;
+    color: #9900A1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+/* Estilo para los enlaces */
+a {
+    height: 5vh;
+}
+
+/* Estilo para mostrar elementos */
+.show{
+    display: block;
+}
+
+/* Estilo para el reloj en la barra de navegación */
+#clock {
+    position: absolute;
+    font-size: 1.5rem;
+    right: 1%;
+    color: #9900A1;
+    font-family: 'Comodore Angled', monospace;
+}
+
+/* Estilo para el ícono del menú */
+.icono-menu{
+    width: 4.8vh;
+    height: 5vh;
+    background-color: #9C53AC;
+}
+
+/* Estilo de hover para los enlaces en el contenedor de páginas */
+.container-paginas a:hover {
+    opacity: .75;
+}
+
+/* Estilo para el texto en el menú */
+.texto-menu {
+    text-align: left;
+    padding-left: 4%;
+    font-size: 2.5vh;
+}
+
+/* Ajustes para pantallas pequeñas y orientación vertical */
+@media screen and (orientation:portrait)  {
+    /* Ajustes para la barra de navegación */
+    .Nav-Bar{
+        height: 10vh;
+    }
+
+    .Nav-Bar button {
+      width: fit-content;
+    }
+  
+    .Nav-Bar h2{
+      display: none;
+    }
+    
+    .logo {
+        width: 7.5vh;
+        padding: 1%;
+    }
+
+    /* Ajustes para el menú en la barra de navegación */
+    .nav-bar-menu{
+        width: 60VW;
+        height: fit-content;
+        padding: 0 1%;
+    }
+
+    .container-titulos {
+        width: min-content;
+        margin: 1%;
+    }
+
+    .container-titulos h3 {
+        padding: 0;
+        text-align: center;
+        width: 90%;  
+        font-size: 3vh;      
+    }
+
+    .container-titulos img {
+        display: none;
+    }
+
+    .texto-menu {
+        display: none;
+        width: 0%;
+    }
+
+    .icono-menu {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    /* Ajustes para el reloj en la barra de navegación */
+    #clock {
+        font-size: 4vh;
+    }
+}

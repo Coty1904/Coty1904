@@ -2,192 +2,373 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS\Estilos.css">
-    <link rel="stylesheet" href="CSS\Portafolio.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <title>Curriculum prueba</title>
+
+    <link rel="stylesheet" href="./css/inicio.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/sobre-mi.css">
+    <link rel="stylesheet" href="./css/académico.css">
+    <link rel="stylesheet" href="./css/hobbies.css">
+    <link rel="icon" href="./materiales/logo/Coty_Logo.png">
+
+    <title>Constantino Carracedo</title>
 </head>
-<body>
-    <header>
-        <h1 id="nombre">Constantino Carracedo</h1>
-    </header>
-    <div class="Barra">
-        <a class="Activo" href="index.html">Inicio</a>
-        <a href="Paginas/Formación.html" target="_self">Formación Académica, Idiomas & Voluntariado</a>
-        <a href="Paginas/Conocimientos.html">Conocimientos y Habilidades</a>
-        <a href="Paginas/Hobbies.html">Hobbies</a>
+<body class="Custom-Cursor">
+
+    <!-- Modal de imagen -->
+    <div class="image-modal" id="image-modal">
+        <div class="titulo-modal">
+            <h2 class="image-name" id="modal-image-name"></h2>
+            <button class="cerrar-btn" id="cerrar-modal-btn" onclick="closeImage()">X</button>
+        </div>
+        <img class="modal-content" id="modal-image" src="" alt="">
     </div>
-    <h2>Portafolio</h2>
-    <span class="linea"></span>
-        <h3><a class="redes" target="_blank" href="https://www.instagram.com/coty_photographies/">Fotografías</a></h3>
-    <!--Galeria de imagenes-->
-    <section class="galeria">
-        <a href="#image 1">
-            <img src="Imagenes\Fotografías\Portafolio 1.JPG" alt="">
-        </a>
-        <a href="#image 2">
-            <img src="Imagenes\Fotografías\Portafolio 2.JPG" alt="">
-        </a>
-        <a href="#image 3">
-            <img src="Imagenes\Fotografías\Portafolio 3.JPG" alt="">
-        </a>
-        <a href="#image 4">
-            <img src="Imagenes\Fotografías\Portafolio 4.JPG" alt="">
-        </a>
-        <a href="#image 5">
-            <img src="Imagenes\Fotografías\Portafolio 5.JPG" alt="">
-        </a>
-        <a href="#image 6">
-            <img src="Imagenes\Fotografías\Portafolio 6.JPG" alt="">
-        </a>
-        <a href="#image 7">
-            <img src="Imagenes\Fotografías\Portafolio 7.JPG" alt="">
-        </a>
-        <a href="#image 8">
-            <img src="Imagenes\Fotografías\Portafolio 8.JPG" alt="">
-        </a>
-        <a href="#image 9">
-            <img src="Imagenes\Fotografías\Portafolio 9.JPG" alt="">
-        </a>
-        <a href="#image 10">
-            <img src="Imagenes\Fotografías\Portafolio 10.JPG" alt="">
-        </a>
-    </section>
-    <!--Acá estan las imagenes cuando saltan a pantalla-->
-    <article class="light-box" id="image 1">
-        <a href="#image 10" class="anterior">
-            <span class="material-symbols-outlined">arrow_back</span>
-        </a>
-            <img src="Imagenes\Fotografías\Portafolio 1.JPG" alt="">
-        <a href="#image 2" class="siguiente">
-            <span class="material-symbols-outlined">arrow_forward</span>
-        </a>
-        <a href="#" class="cerrar">X</a>
-    </article>
     
-    <article class="light-box" id="image 2">
-        <a href="#image 1" class="anterior">
-            <span class="material-symbols-outlined">arrow_back</span>
-        </a>
-            <img src="Imagenes\Fotografías\Portafolio 2.JPG" alt="">
-        <a href="#image 3" class="siguiente">
-            <span class="material-symbols-outlined">arrow_forward</span>
-        </a>
-        <a href="#" class="cerrar">X</a>
-    </article>
-    
-    <article class="light-box" id="image 3">
-        <a href="#image 2" class="anterior">
-            <span class="material-symbols-outlined">arrow_back</span>
-        </a>
-            <img src="Imagenes\Fotografías\Portafolio 3.JPG" alt="">
-        <a href="#image 4" class="siguiente">
-            <span class="material-symbols-outlined">arrow_forward</span>
-        </a>
-        <a href="#" class="cerrar">X</a>
-    </article>
-    
-    <article class="light-box" id="image 4">
-        <a href="#image 3" class="anterior">
-            <span class="material-symbols-outlined">arrow_back</span>
-        </a>
-            <img src="Imagenes\Fotografías\Portafolio 4.JPG" alt="">
-        <a href="#image 5" class="siguiente">
-            <span class="material-symbols-outlined">arrow_forward</span>
-        </a>
-        <a href="#" class="cerrar">X</a>
-    </article>
-    
-    <article class="light-box" id="image 5">
-        <a href="#image 4" class="anterior">
-            <span class="material-symbols-outlined">arrow_back</span>
-        </a>
-            <img src="Imagenes\Fotografías\Portafolio 5.JPG" alt="">
-        <a href="#image 6" class="siguiente">
-            <span class="material-symbols-outlined">arrow_forward</span>
-        </a>
-        <a href="#" class="cerrar">X</a>
-    </article>
-    
-    <article class="light-box" id="image 6">
-        <a href="#image 5" class="anterior">
-            <span class="material-symbols-outlined">arrow_back</span>
-        </a>
-            <img src="Imagenes\Fotografías\Portafolio 6.JPG" alt="">
-        <a href="#image 7" class="siguiente">
-            <span class="material-symbols-outlined">arrow_forward</span>
-        </a>
-        <a href="#" class="cerrar">X</a>
-    </article>
-    
-    <article class="light-box" id="image 7">
-        <a href="#image 6" class="anterior">
-            <span class="material-symbols-outlined">arrow_back</span>
-        </a>
-            <img src="Imagenes\Fotografías\Portafolio 7.JPG" alt="">
-        <a href="#image 8" class="siguiente">
-            <span class="material-symbols-outlined">arrow_forward</span>
-        </a>
-        <a href="#" class="cerrar">X</a>
-    </article>
-    
-    <article class="light-box" id="image 8">
-        <a href="#image 7" class="anterior">
-            <span class="material-symbols-outlined">arrow_back</span>
-        </a>
-            <img src="Imagenes\Fotografías\Portafolio 8.JPG" alt="">
-        <a href="#image 9" class="siguiente">
-            <span class="material-symbols-outlined">arrow_forward</span>
-        </a>
-        <a href="#" class="cerrar">X</a>
-    </article>
-    
-    <article class="light-box" id="image 9">
-        <a href="#image 8" class="anterior">
-            <span class="material-symbols-outlined">arrow_back</span>
-        </a>
-            <img src="Imagenes\Fotografías\Portafolio 9.JPG" alt="">
-        <a href="#image 10" class="siguiente">
-            <span class="material-symbols-outlined">arrow_forward</span>
-        </a>
-        <a href="#" class="cerrar">X</a>
-    </article>
-    
-    <article class="light-box" id="image 10">
-        <a href="#image 9" class="anterior">
-            <span class="material-symbols-outlined">arrow_back</span>
-        </a>
-            <img src="Imagenes\Fotografías\Portafolio 10.JPG" alt="">
-        <a href="#image 1" class="siguiente">
-            <span class="material-symbols-outlined">arrow_forward</span>
-        </a>
-        <a href="#" class="cerrar">X</a>
-    </article>
+    <!-- Modal de video -->
+    <div id="video-modal" class="video-modal">
+        <div class="titulo-modal">
+            <h2 class="image-name" id="video-name"></h2>
+            <button class="cerrar-btn" onclick="closeVideo()">X</button>
+        </div>
+        <video id="video-player" controls></video>
+    </div>
 
-    <h3><a class="redes" target="_blank" href="https://www.youtube.com/@c07y52">Videos</a></h3>
-    <section class="galeria">
-        <video class="video" controls>
-            <source src="Videos\Revolución Industrial.mp4" type="video/mp4">
-            El navegador no soporta el video. :(
-        </video>
-    </section>
+    <div class="container">
+        <!-- Título principal -->
+        <div class="Titulo">
+            <h1>Coty OS</h1>
+        </div>
 
-    <span class="linea-footer"></span>
-    <footer>
-        <address>
-            <h2>Contacto</h2>
-            <div class="iconos">
-                <i class="material-icons">phone</i>
-                <span class="texto">Teléfono: 11-2345-6789</span>
+        <div class="Folder-1">
+            <!-- Carpeta de Fotos -->
+            <div class="container-folder" onclick="toggleFotos()">
+                <img class="icono" src="./materiales/iconos/Folder (Content).png" alt="Folder (Content)">
+                <h2>Fotos</h2>
             </div>
-            <div class="iconos">
-                <i class="material-icons">mail</i>
-                <span>Email: Cuentafalsano100@gmail.com</span>
+        </div>
+        
+        <!-- Carpeta de Videos -->
+        <div class="Folder-2">
+            <div class="container-folder" onclick="toggleVideos()">
+                <img class="icono" src="./materiales/iconos/Folder (Content).png" alt="Folder (Content)">
+                <h2>Videos</h2>
             </div>
-        </address>
-    </footer>
+        </div>
+
+        <!-- Carpeta de CV -->
+        <div class="CV">
+            <div class="container-folder">
+                <a class="container-folder" href="./materiales/documentos/Curriculum.pdf" target="_blank">
+                    <img class="icono" src="./materiales/iconos/Document.png" alt="Document">
+                    <h2>CV</h2>
+                </a>
+            </div>
+        </div>
+
+        <!-- Carpeta de Planes Secretos -->
+        <div class="Folder-3">
+            <div class="container-folder" onclick="togglePlanes()">
+                <img class="icono" src="./materiales/iconos/Folder (Empty).png" alt="Folder (Empty)">
+                <h2>Planes Secretos</h2>
+            </div>
+        </div>
+
+        <div class="Trash-Can">
+            <!-- Papelera de reciclaje -->
+            <div class="trash-can">
+                <img class="basurero" src="./materiales/iconos/Trash Can.png" alt="Trash-Can">
+            </div>
+        </div>
+
+        <div class="Nav-Bar">
+                <!-- Botón del menú desplegable -->
+            <div class="centrar-nav">
+                <button onclick="toggleDropdown()" class="dropbtn">
+                    <i class="fa">
+                        <img class="logo" src="./materiales/logo/Coty_Logo.png" alt="logo" onclick="myFunction()">
+                        <h2 clase="menu" onclick="myFunction()">Menú</h2>
+                    </i>
+                </button>
+            
+                <div id="clock">00:00</div>
+            </div>
+            <div id="myDropdown" class="dropdown-content">
+                <!-- Contenido del menú desplegable -->
+                <div class="nav-bar-menu">
+                    <!-- Contenido del menú -->
+                    <div class="container-titulos">
+                        <h3>Constantino Carracedo</h3>
+                        <img src="./materiales/avatar/Coty_Gyro.png" alt="Coty Avatar">
+                    </div>
+                    <div class="container-paginas">
+                        <a href="#about" onclick="abrirSobreMi()">
+                            <img src="./materiales/iconos/Carnet.png" alt="Carnet" class="icono-menu">
+                            <p class="texto-menu">Sobre Mi</p>
+                        </a>
+                        <a href="#contact" onclick="toggleContacto()">
+                            <img class="icono-menu" src="./materiales/iconos/Contact.png" alt="Contact">
+                            <p class="texto-menu">Contacto</p>
+                        </a>
+                        <a href="#references">
+                            <img src="./materiales/iconos/Lupa.png" alt="Lupa" class="icono-menu">
+                            <p class="texto-menu">Referencias</p>
+                        </a>
+                        <a href="#tournaments" onclick="toggleCompeticiones()">
+                            <img src="./materiales/iconos/Trophy.png" alt="Trophy" class="icono-menu">
+                            <p class="texto-menu">Competiciones</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carpeta-container" id="carpeta-fotos">
+            <div class="titulo-carpetas">
+                <!-- Título de la carpeta de Fotos -->
+                <h3>Fotos</h3>
+                
+                <!-- Botón para cerrar la carpeta de Fotos -->
+                <button class="cerrar-btn" onclick="cerrarFotos()">X</button>
+            </div>
+            
+            <!-- Contenido de la carpeta de Fotos -->
+            <div class="carpeta-contenidos">
+                <!-- Imagen 1: Coty Chill -->
+                <div class="tab" onclick="openImage('./materiales/avatar/Coty_chill.png', 'Coty Chill')">
+                    <img src="./materiales/avatar/Coty_chill.png" alt="Coty Chill">
+                </div>
+                
+                <!-- Imagen 2: Coty Cool -->
+                <div class="tab" onclick="openImage('./materiales/avatar/Coty_cool.png', 'Coty Cool')">
+                    <img src="./materiales/avatar/Coty_cool.png" alt="Coty Cool">
+                </div>
+                
+                <!-- Imagen 3: Coty Curioso -->
+                <div class="tab" onclick="openImage('./materiales/avatar/Coty_curioso.png', 'Coty Curioso')">
+                    <img src="./materiales/avatar/Coty_curioso.png" alt="Coty Curioso">
+                </div>
+                
+                <!-- Imagen 4: Coty Eniac -->
+                <div class="tab" onclick="openImage('./materiales/avatar/Coty_Eniac.png', 'Coty Eniac')">
+                    <img src="./materiales/avatar/Coty_Eniac.png" alt="Coty Eniac">
+                </div>
+                
+                <!-- Imagen 5: Coty Enojado -->
+                <div class="tab" onclick="openImage('./materiales/avatar/Coty_enojado.png', 'Coty Enojado')">
+                    <img src="./materiales/avatar/Coty_enojado.png" alt="Coty Enojado">
+                </div>
+                
+                <!-- Imagen 6: Coty Error -->
+                <div class="tab" onclick="openImage('./materiales/avatar/Coty_error.png', 'Coty Error')">
+                    <img src="./materiales/avatar/Coty_error.png" alt="Coty Error">
+                </div>
+                
+                <!-- Imagen 7: Coty Feliz -->
+                <div class="tab" onclick="openImage('./materiales/avatar/Coty_feliz.png', 'Coty Feliz')">
+                    <img src="./materiales/avatar/Coty_feliz.png" alt="Coty Feliz">
+                </div>
+                
+                <!-- Imagen 8: Coty Gyro -->
+                <div class="tab" onclick="openImage('./materiales/avatar/Coty_Gyro.png', 'Coty Gyro')">
+                    <img src="./materiales/avatar/Coty_Gyro.png" alt="Coty Gyro">
+                </div>
+                
+                <!-- Imagen 9: Coty Campeón del Mundo -->
+                <div class="tab" onclick="openImage('./materiales/avatar/Coty_Mundialista_campeon.png', 'Coty Campeón del Mundo')">
+                    <img src="./materiales/avatar/Coty_Mundialista_campeon.png" alt="Coty Campeón del Mundo">
+                </div>
+            </div>
+        </div>
+        
+        <div class="carpeta-container" id="carpeta-videos">
+            <div class="titulo-carpetas">
+                <!-- Título de la carpeta de Videos -->
+                <h3>Videos</h3>
+                
+                <!-- Botón para cerrar la carpeta de Video -->
+                <button class="cerrar-btn" onclick="cerrarVideos()">X</button>
+            </div>
+            
+            <!-- Contenido de la carpeta de Videos -->
+            <div class="carpeta-contenidos">
+                <!-- Video 1: Revolución Industrial -->
+                <div class="tab" onclick="openVideo('./materiales/videos/Revolución Industrial.mp4', 'Revolución Industrial')">
+                    <img id="thumbnail" src="./materiales/videos/Revolución Industrial Thumbnail.png" alt="Revolución Industrial">
+                </div>
+            </div>
+        </div>
+        
+        <div class="carpeta-container" id="carpeta-planes">
+            <div class="titulo-carpetas">
+                <!-- Título de la carpeta de PS -->
+                <h3>Planes Secretos</h3>
+                
+                <!-- Botón para cerrar la carpeta de PS -->
+                <button class="cerrar-btn" onclick="cerrarPlanes()">X</button>
+            </div>
+            
+            <!-- Contenido de la carpeta de Planes Secretos -->
+            <div class="carpeta-contenidos">
+                <!-- Imagen o contenido secreto -->
+                <img src="./materiales/videos/pato.gif" alt="Pato">
+            </div>
+        </div>
+        
+        <!-- Sección "Sobre Mí" - Pertenece al menú del navbar -->
+        <div class="sobre-mi">
+            <div class="titulo">
+                <h2>Sobre Mi</h2>
+                <button class="cerrar-btn" onclick="cerrarSobreMi()">X</button>
+            </div>
+            <!-- Titulos de las secciones -->
+            <div class="titulos">
+                <h3 class="pestaña Active">General</h3>
+                <h3 class="pestaña">Académico</h3>
+                <h3 class="pestaña">Hobbies</h3>
+            </div>
+            
+            <!-- Sección "General" (activo por defecto) -->
+            <div class="container-about General Activo">
+                <img src="./materiales/avatar/Coty_Gyro.png" alt="Coty Avatar">
+                <div class="General-texto">
+                    <h4>Soy Constantino Carracedo</h4>
+                    <p>Mi nombre es Constantino Carracedo, argentino de 21 años, nacido el 19 de abril de 2002, actualmente residiendo en la Ciudad de México. Mis intereses incluyen la programación, la música, el fútbol, el anime y los videojuegos, y comparto mi hogar con dos queridas mascotas. Estoy cursando Ingeniería en Sistemas y mi rutina se caracteriza por regresar a casa alrededor de las 8 p.m. después de las clases, evitando fumar y ocasionalmente disfrutando de una bebida. Mi noche sigue un horario establecido, acostándome a las 11 p.m. Después de pasar tiempo con mi familia en una cena, lo que garantiza un ambiente de conexión y un sueño reparador. Mi filosofía de vida se centra en mantener la paz y evitar conflictos innecesarios, buscando la felicidad en la armonía con los demás, aunque estoy dispuesto a afrontar cualquier desafío que se presente con confianza en mis habilidades y determinación. Mi objetivo es vivir una vida tranquila y satisfactoria, donde mis pasiones y mi formación académica ocupen un lugar destacado.</p>
+                </div>
+            </div>
+
+            <!-- Sección "Académico" -->
+            <div class="container-about Académico">
+                <h3>Registro Académico</h3>
+                <div class="timeline">
+                    <!-- Lado izquierdo de la línea de tiempo -->
+                    <div class="izq-container">
+                        <div class="container-time izq">
+                            <div class="contenido">
+                                <h4>Marzo 2022</h4>
+                                <p>Comunicación Audiovisual en Universidad de Palermo</p>
+                            </div>
+                        </div>
+                        <div class="container-time izq">
+                            <div class="contenido">
+                                <h4>Junio 2022</h4>
+                                <p>Noveno lugar en la segunda copa de programación de Python.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Lado derecho de la línea de tiempo -->
+                    <div class="der-container">
+                        <div class="container-time der">
+                            <div class="contenido">
+                                <h4>Marzo 2023</h4>
+                                <p>Lic. en Gestión de Sistemas de la Información en UADE (Universidad Argentina de la Empresa)</p>
+                            </div>
+                        </div>
+                        <div class="container-time der">
+                            <div class="contenido">
+                                <h4>Septiembre 2023</h4>
+                                <p>Segundo Lugar en Deep Racer, una competición de autos autónomos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="responsive-container">
+                        <div class="contenido">
+                            <h4>Marzo 2022</h4>
+                            <p>Comunicación Audiovisual en Universidad de Palermo</p>
+                        </div>
+                        <div class="contenido">
+                            <h4>Marzo 2023</h4>
+                            <p>Lic. en Gestión de Sistemas de la Información en UADE (Universidad Argentina de la Empresa)</p>
+                        </div>
+                        <div class="contenido">
+                            <h4>Junio 2022</h4>
+                            <p>Noveno lugar en la segunda copa de programación de Python.</p>
+                        </div>
+                        <div class="contenido">
+                            <h4>Septiembre 2023</h4>
+                            <p>Segundo Lugar en Deep Racer, una competición de autos autónomos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección "Hobbies" -->
+            <div class="container-about Hobbies">
+                <h4>Hobbies</h4>
+                
+                <!-- Hobbie 1: Música -->
+                <div class="container-hobbie">
+                    <img src="./materiales/iconos/Musical Note.png" alt="Musical Note">
+                    <h5>Música</h5>
+                    <ul>
+                        <li>Tocar Guitarra</li>
+                        <li>Disfrutar de escuchar música</li>
+                    </ul>
+                </div>
+                
+                <!-- Hobbie 2: Programación -->
+                <div class="container-hobbie">
+                    <img src="./materiales/iconos/Programing.png" alt="programing">
+                    <h5>Programación</h5>
+                    <ul>
+                        <li>HTML y CSS</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                    </ul>
+                </div>
+                
+                <!-- Hobbie 3: Deportes -->
+                <div class="container-hobbie">
+                    <img src="./materiales/iconos/Basket Ball.png" alt="Basket Ball">
+                    <h5>Deportes</h5>
+                    <ul>
+                        <li>Football</li>
+                        <li>Crossfit</li>
+                        <li>Kinestecia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección "Contacto" - Pertenece al menú del navbar -->
+        <div class="contacto-popup" id="contacto">
+            <div class="titulo">
+                <img src="./materiales/iconos/Contact.png" alt="contacto icono">
+                <h3>Contacto</h3>
+                <button class="cerrar-btn" onclick="cerrarContacto()">X</button>
+            </div>
+            <div class="contacto-container">
+                <h4>Contacto</h4>
+                <p>Mail: Coty.carracedo@gmail.com</p>
+                <p>Celular: 55-6909-8499</p>
+            </div>
+        </div>
+
+        <!-- Sección "Competiciones" - Pertenece al menú del navbar -->
+        <div class="competiciones-popup" id="competiciones">
+            <div class="titulo">
+                <img src="./materiales/iconos/Trophy.png" alt="Trophy">
+                <h3>Competiciones</h3>
+                <button class="cerrar-btn" onclick="cerrarCompeticiones()">X</button>
+            </div>
+            <div class="container-competiciones-externo">
+                <div class="container-competiciones-interno">
+                    <img src="./materiales/iconos/9°.png" alt="9°">
+                    <h4>Copa Programación de UADE</h4>
+                    <p>Noveno Lugar</p>
+                </div>
+                <div class="container-competiciones-interno">
+                    <img src="./materiales/iconos/Second Place Medal.png" alt="Second Place Medal">
+                    <h4>Deep Racer UADE</h4>
+                    <p>Segundo Lugar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/folders.js"></script>
+    <script src="./js/sobre-mi.js"></script>
+
 </body>
-</html>
+</html> 

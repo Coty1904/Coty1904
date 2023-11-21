@@ -1,0 +1,169 @@
+.Académico {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: #F194FF;
+    overflow-y: unset;
+}
+
+.timeline {
+    display: flex;
+    max-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* The actual timeline (la regla vertical) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #B93ECC;
+    top: 5%;
+    bottom: 5%;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Contenedor de elementos izquierdos */
+.izq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+}
+
+/* Contenedor de elementos derechos */
+.der-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 50%;
+    margin-bottom: 3%;
+}
+
+/* Estilo para los elementos "izq" */
+.izq {
+    position: relative;
+    width: 90%;
+    height: 30%;
+    margin-top: 10%;
+    margin-left: 1rem;
+}
+
+.izq:first-child {
+    margin-top: 10%;
+}
+
+/* Estilo para los elementos "der" */
+.der {
+    position: relative;
+    width: 90%;
+    height: 30%;
+    margin-top: 10%;
+    margin-right: 1rem;
+}
+
+.der:first-child {
+    margin-top: 30%;
+}
+
+.contenido {
+    padding: 20px 30px;
+    background-color: #6A0679;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Estilo para la flecha en los elementos "izq" */
+.izq::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #6A0679;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+}
+
+/* Estilo para la flecha en los elementos "der" */
+.der::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #6A0679;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+}
+
+.Académico h3 {
+    padding: 1%;
+    padding-top: 5rem;
+    text-align: center;
+    width: 90%;
+    border-bottom: 3px solid;
+    margin: 2% 0;
+    font-size: 2rem;
+}
+
+.responsive-container {
+    display: none;
+}
+
+@media screen and (orientation: portrait) {
+    .Académico h3 {
+        font-size: 4vh;
+    }
+
+    .timeline {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .timeline::after {
+        top: 10%;
+        left: 5%;
+        margin-left: 0;
+    }
+
+    .izq-container, .der-container {
+        display: none;
+    }
+
+    .responsive-container {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        height: max-content;
+        gap: 5%;
+        padding: 2% 0;
+    }
+
+    .responsive-container .contenido{
+        margin: 2% 0;
+    }
+
+    .responsive-container .contenido::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #6A0679;
+        top: 50%;
+        left: -10px;
+        transform: translateY(-50%);
+    }
+}
